@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh--Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--網頁icon-->
+    <link rel="icon" href="/img/files.svg">
+    <title>小專題</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        /*輪播圖高度固定\*/
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: rgba(255, 255, 255, 0.5);">
+        <div class="container-fluid">
+            <a class="navbar-brand">導覽列</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/行李清單.html">行李清單</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">A
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">a</a></li>
+                            <li><a class="dropdown-item" href="#">b</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- 輪播圖 -->
+    <div class="container mt-0">
+        <div id="demo" class="carousel slide" data-bs-interval="2000" data-bs-ride="carousel"> <!--速度先設成2秒一次-->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/P_20231126_144627.jpg" class="img-fluid " alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/P_20231127_173539.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/P_20231128_115141.jpg" class="img-fluid" alt="">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 分頁標籤 -->
+    <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand">頁籤</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-tab"
+                        aria-controls="nav-tab" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="nav nav-tabs collapse navbar-collapse" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-journey-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-journey" type="button" role="tab" aria-controls="nav-journey"
+                            aria-selected="true">行程規劃</button>
+
+                        <button class="nav-link" id="nav-day-tab" data-bs-toggle="tab" data-bs-target="#nav-day"
+                            type="button" role="tab" aria-controls="nav-day" aria-selected="false">旅遊日行程</button>
+
+                        <button class="nav-link" id="nav-live-tab" data-bs-toggle="tab" data-bs-target="#nav-live"
+                            type="button" role="tab" aria-controls="nav-live" aria-selected="false">住宿資訊</button>
+
+                        <button class="nav-link" id="nav-transportation-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-transportation" type="button" role="tab"
+                            aria-controls="nav-transportation" aria-selected="false">交通資訊</button>
+
+                        <button class="nav-link" id="nav-food-tab" data-bs-toggle="tab" data-bs-target="#nav-food"
+                            type="button" role="tab" aria-controls="nav-food" aria-selected="false">美食景點</button>
+
+                        <button class="nav-link" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#nav-buy"
+                            type="button" role="tab" aria-controls="nav-buy" aria-selected="false">購物清單</button>
+                    </div>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <!-- 行程規劃 -->
+                <div class="table tab-pane fade show active" id="nav-journey" role="tabpanel"
+                    aria-labelledby="nav-journey-tab" tabindex="0">
+                    <h4 class="mt-3">京都五日遊</h4>
+                    <table class="table table-bordered mt-3">
+                        <tr class="text-center">
+                            <th>Day 1</th>
+                            <th>Day 2</th>
+                            <th>Day 3</th>
+                            <th>Day 4</th>
+                            <th>Day 5</th>
+                        </tr>
+                        <tr>
+                            <th>機場報到</th>
+                            <th>保津川遊船</th>
+                            <th>錦市場</th>
+                            <th>伏見稻荷神社</th>
+                            <th>機場報到</th>
+                        </tr>
+                        <tr>
+                            <th>京都車站</th>
+                            <th>嵐山渡月橋</th>
+                            <th>花見小路</th>
+                            <th>二条城</th>
+                            <th>免稅商店</th>
+                        </tr>
+                        <tr>
+                            <th>飯店</th>
+                            <th>竹林小徑</th>
+                            <th>八版神社</th>
+                            <th>高木批發超市</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>晚餐</th>
+                            <th>午餐</th>
+                            <th>二年坂</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>購物</th>
+                            <th>金閣寺</th>
+                            <th>三年坂</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th>北野天滿宮</th>
+                            <th>清水寺</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+                <!-- 旅遊日行程 -->
+                <div class="tab-pane fade" id="nav-day" role="tabpanel" aria-labelledby="nav-day-tab" tabindex="0">
+                    <!-- <nav>
+                        <div class="mt-3">
+                            <button type="button" class="btn btn-outline-primary active" id="nav-day1-tab" data-bs-toggle="tab" 
+                                data-bs-target="#nav-day1">Day 1</button>
+                            <button type="button" class="btn btn-outline-secondary" id="nav-day2-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-day2">Day 2</button>
+                            <button type="button" class="btn btn-outline-success" id="nav-day3-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-day3">Day 3</button>
+                            <button type="button" class="btn btn-outline-danger" id="nav-day4-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-day4">Day 4</button>
+                            <button type="button" class="btn btn-outline-info" id="nav-day5-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-day5" >Day 5</button>
+                        </div>
+                    </nav> -->
+                </div>
+                <!-- 住宿資訊 -->
+                <div class="tab-pane fade " id="nav-live" role="tabpanel" aria-labelledby="nav-live-tab" tabindex="0">
+                    <div class="card col cols-md-3 m-3 g-4" style="max-width: max-content;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="/img/飯店" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h3><a class="card-title link-primary link-underline-light mt-3"
+                                            href="https://sotetsu-hotels.com/fresa-inn/hachijo/">相鐵FRESA INN 京都站八條口</a>
+                                    </h3>
+                                    <hr>
+                                    <p class="card-text">
+                                        地址 : １１番地 Higashikujo Nishisannocho, Minami Ward, Kyoto, 601-8003日本
+                                        <hr>
+                                        電話 : (+81) 75-284-0203
+                                        <hr>
+                                        入住時間 : 下午3:00
+                                        <br>
+                                        退房時間 : 上午11:00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3268.9505637004095!2d135.760992!3d34.982902999999965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ad12afd4d7%3A0xff8371e5fe953e2c!2z55u46ZC1RlJFU0EgSU5OIOS6rOmDveermeWFq-aineWPow!5e0!3m2!1szh-TW!2stw!4v1756628760100!5m2!1szh-TW!2stw"
+                        width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <!-- 交通資訊 -->
+                <div class="tab-pane fade" id="nav-transportation" role="tabpanel"
+                    aria-labelledby="nav-transportation-tab" tabindex="0">...
+                </div>
+                <!-- 美食景點 -->
+                <div class="tab-pane fade" id="nav-food" role="tabpanel" aria-labelledby="nav-food-tab" tabindex="0">
+                    <div class="row row-cols-1 row-cols-md-3 m-3 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 購物清單 -->
+                <div class="tab-pane fade mt-3" id="nav-buy" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
+                    <div class="row row-cols-1 row-cols-md-3 m-3 g-4">
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src=" " class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text">This is a longer card with supporting text below as a natural
+                                        lead-in to additional content. This content is a little bit longer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+</body>
+
+</html>
