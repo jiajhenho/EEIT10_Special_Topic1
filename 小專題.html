@@ -22,6 +22,7 @@
             height: 400px;
             object-fit: cover;
         }
+
     </style>
 
 </head>
@@ -124,6 +125,9 @@
 
                         <button class="nav-link" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#nav-buy"
                             type="button" role="tab" aria-controls="nav-buy" aria-selected="false">購物清單</button>
+
+                        <button class="nav-link" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#nav-session"
+                            type="button" role="tab" aria-controls="nav-session" aria-selected="false">常用會話</button>
                     </div>
                 </div>
             </nav>
@@ -326,6 +330,64 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <!-- 常用會話 -->
+                <div class="tab-pane fade row row-md-3 m-3 g-4" id="nav-session" role="tabpanel"
+                    aria-labelledby="nav-session-tab" tabindex="0">
+                    <!-- 禮儀區塊 -->
+                    <div>  
+                        <fieldset class="form-control border-muted">
+                            <legend>禮儀</legend>
+                            <div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#Hello">你好</button>
+                                <div id="Hello" class="collapse">こんにちは / Konnichiwa</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#goodmorning">早安</button>
+                                <div id="goodmorning" class="collapse">おはようございます / Ohayou gozaimasu</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#goodevening">晚安</button>
+                                <div id="goodevening" class="collapse">こんばんは / Konbanwa</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#goodbye">再見</button>
+                                <div id="goodbye" class="collapse">さようなら / Sayounara</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#thankyou">謝謝</button>
+                                <div id="thankyou" class="collapse">ありがとうございます / Arigatou gozaimasu</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#sorry">不好意思 / 對不起</button>
+                                <div id="sorry" class="collapse">すみません / Sumimasen</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#noproblem">沒關係</button>
+                                <div id="noproblem" class="collapse">大丈夫です / Daijoubu desu</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#toilet">請問廁所在哪裡?</button>
+                                <div id="toilet" class="collapse">トイレはどこですか / Toire wa doko desu ka</div>
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse" data-bs-target="#plstakecare">請多關照</button>
+                                <div id="plstakecare" class="collapse">よろしくお願いします / Yoroshiku onegai shimasu</div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- 購物區塊 -->
+                    <div>
+                        <fieldset class="form-control border-muted">
+                            <legend>購物</legend>
+                            <div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#howmuch">這個多少錢？</button>
+                                <div id="howmuch" class="collapse">これはいくらですか？ / Kore wa ikura desu ka</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#look">我可以看看嗎？</button>
+                                <div id="look" class="collapse">見てもいいですか / Mite mo ii desu ka</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#haveproduce">有這個嗎？</button>
+                                <div id="haveproduce" class="collapse">これがありますか / Kore ga arimasu ka</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#whatisthis">這是什麼？</button>
+                                <div id="whatisthis" class="collapse">これは何ですか / Kore wa nan desu ka</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#wantthis">我想要這個。</button>
+                                <div id="wantthis" class="collapse">これをください / Kore o kudasai</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#creditcard">可以刷卡嗎？</button>
+                                <div id="creditcard" class="collapse">クレジットカードは使えますか / Kurejitto kaado wa tsukaemasu ka</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#othercolor">有其他顏色嗎？</button>
+                                <div id="othercolor" class="collapse">他の色がありますか / Hokano iro ga arimasu ka</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#taxfree">請問可以免稅嗎？</button>
+                                <div id="taxfree" class="collapse">免稅、できますか / menze dekimaska</div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#"></button>
+                                <div id="" class="collapse"></div>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#"></button>
+                                <div id="" class="collapse"></div>
+                            </div>
+                        </fieldset>
                     </div>
                 </div>
             </div>
