@@ -26,6 +26,13 @@
         .btn {
             margin: 5px;
         }
+
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color:rgba(0, 0, 0, 0.5);
+            color: white;
+        }
     </style>
 
 </head>
@@ -48,6 +55,10 @@
 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/行李清單.html">行李清單</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/常用會話.html">常用會話</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -113,8 +124,9 @@
                             data-bs-target="#nav-journey" type="button" role="tab" aria-controls="nav-journey"
                             aria-selected="true">行程規劃</button>
 
-                        <button class="nav-link" id="nav-day-tab" data-bs-toggle="tab" data-bs-target="#nav-day"
-                            type="button" role="tab" aria-controls="nav-day" aria-selected="false">旅遊日行程</button>
+                        <button class="nav-link" id="nav-day-tab" data-bs-toggle="tab" data-bs-target="#nav-attractions"
+                            type="button" role="tab" aria-controls="nav-attractions"
+                            aria-selected="false">旅行景點</button>
 
                         <button class="nav-link" id="nav-live-tab" data-bs-toggle="tab" data-bs-target="#nav-live"
                             type="button" role="tab" aria-controls="nav-live" aria-selected="false">住宿資訊</button>
@@ -128,9 +140,6 @@
 
                         <button class="nav-link" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#nav-buy"
                             type="button" role="tab" aria-controls="nav-buy" aria-selected="false">購物清單</button>
-
-                        <button class="nav-link" id="nav-buy-tab" data-bs-toggle="tab" data-bs-target="#nav-session"
-                            type="button" role="tab" aria-controls="nav-session" aria-selected="false">常用會話</button>
                     </div>
                 </div>
             </nav>
@@ -191,32 +200,52 @@
                         </tr>
                     </table>
                 </div>
-                <!-- 旅遊日行程 -->
-                <div class="tab-pane fade" id="nav-day" role="tabpanel" aria-labelledby="nav-day-tab" tabindex="0">
-                    <div class="m-3">
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#Day1" aria-expanded="false" aria-controls="Day1">
-                            Day 1
-                        </button>
-                        <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#Day2" aria-expanded="false" aria-controls="Day2">
-                            Day 2
-                        </button>
-                        <button class="btn btn-outline-info" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#Day3" aria-expanded="false" aria-controls="Day3">
-                            Day 3
-                        </button>
-                        <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#Day4" aria-expanded="false" aria-controls="Day4">
-                            Day 4
-                        </button>
-                        <button class="btn btn-outline-danger" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#Day5" aria-expanded="false" aria-controls="Day5">
-                            Day 5
-                        </button>
-                    </div>
-                    <div>
-
+                <!-- 旅行景點 -->
+                <div class="tab-pane fade" id="nav-attractions" role="tabpanel" aria-labelledby="nav-attractions-tab"
+                    tabindex="0">
+                    <div class="mt-3">
+                        <div class="card text-bg-dark">
+                            <img src="./img/金閣寺.jpg" class="card-img" alt="金閣寺">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">金閣寺</h5>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="./img/清水寺 夜楓2.jpg" class="card-img" alt="清水寺 夜楓">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">清水寺 夜楓</h5>
+                                <p class="card-text">楓夜季,夜間特別開放</p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="..." class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">...</h5>
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="..." class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">...</h5>
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="..." class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">...</h5>
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="..." class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">...</h5>
+                                <p class="card-text">...</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- 住宿資訊 -->
@@ -224,7 +253,7 @@
                     <div class="card col cols-md-3 m-3 g-4" style="max-width: max-content;">
                         <div class="row">
                             <div class="col-md-4">
-                                <img src="/img/飯店" class="img-fluid rounded-start" alt="...">
+                                <img src="/img/飯店" class="img-fluid rounded-start" alt="飯店">
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
@@ -261,21 +290,32 @@
                     <div class="row row-cols-1 row-cols-md-3 m-3 g-4">
                         <div class="col">
                             <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
+                                <img src="./img/牛奶布丁.png " class="card-img-top" alt="牛奶布丁">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <h5 class="card-title"><a class="link-underline-light"
+                                            href="https://www.ohayo-milk.co.jp/dessert/14050.html"
+                                            target="_blank">牛奶布丁</a></h5>
+                                    <p class="card-text">超好吃布丁</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
+                                <img src="./img/さがのや.jpg" class="card-img-top" alt="さがのや">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <h5 class="card-title"><a class="link-underline-light" href="https://sagano-ya.com/"
+                                            target="_blank">さがのや 豪華海鮮丼</a></h5>
+                                    <p class="card-text">在JR嵯峨嵐山站附近好吃的海鮮丼</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="./img/錦市場.png" class="card-img-top" alt="錦市場">
+                                <div class="card-body">
+                                    <h5 class="card-title"><a class="link-underline-light"
+                                            href="https://www.kyoto-nishiki.or.jp/" target="_blank">錦市場</a></h5>
+                                    <p class="card-text">有「京都的廚房」之稱商店街</p>
                                 </div>
                             </div>
                         </div>
@@ -306,165 +346,61 @@
                     <div class="row row-cols-1 row-cols-md-3 m-3 g-4">
                         <div class="col">
                             <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
+                                <img src="./img/休足時間.png" class="card-img-top" alt="休足時間">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <h5 class="card-title"><a class="link-underline-light"
+                                            href="https://kyusokujikan.lion.co.jp/" target="_blank">休足時間</a></h5>
+                                    <p class="card-text">足部舒緩貼片</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
+                                <img src="./img/蒸氣眼罩.png" class="card-img-top" alt="蒸氣眼罩">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <h5 class="card-title"><a class="link-underline-light"
+                                            href="https://www.kao-kirei.com/jp/zh/item/khg/megrhythm/4901301348029/?tw=khg"
+                                            target="_blank">蒸氣眼罩</a></h5>
+                                    <p class="card-text">舒緩雙眼疲勞</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
+                                <img src="./img/老爺爺涼感.jpg" class="card-img-top" alt="老爺爺涼感貼布">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content.</p>
+                                    <h5 class="card-title"><a class="link-underline-light"
+                                            href="https://www.roihi.com/tubokou-cool.html" target="_blank">老爺爺涼感貼布</a>
+                                    </h5>
+                                    <p class="card-text">圓形痠痛貼布</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col">
                             <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
+                                <img src="./img/維他命C.png" class="card-img-top" alt="DHC維他命C">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content. This content is a little bit longer.</p>
+                                    <h5 class="card-title"><a class="link-underline-light"
+                                            href="https://www.dhc.co.jp/goods/goodsdetail.jsp?gCode=2140"
+                                            target="_blank">DHC 維他命C</a></h5>
+                                    <p class="card-text">便宜又大包的維他命C</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- 常用會話 -->
-                <div class="tab-pane fade row row-md-3 m-3 g-4" id="nav-session" role="tabpanel"
-                    aria-labelledby="nav-session-tab" tabindex="0">
-                    <!-- 禮儀區塊 -->
-                    <div>
-                        <fieldset class="form-control border-muted">
-                            <legend>禮儀</legend>
-                            <div>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#Hello">你好</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#goodmorning">早安</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#goodevening">晚安</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#goodbye">再見</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#thankyou">謝謝</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#sorry">不好意思 / 對不起</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#noproblem">沒關係</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#toilet">請問廁所在哪裡?</button>
-                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
-                                    data-bs-target="#plstakecare">請多關照</button>
-                                <hr>
-                                <div id="Hello" class="collapse">こんにちは / Konnichiwa</div>
-                                <div id="goodmorning" class="collapse">おはようございます / Ohayou gozaimasu</div>
-                                <div id="goodevening" class="collapse">こんばんは / Konbanwa</div>
-                                <div id="goodbye" class="collapse">さようなら / Sayounara</div>
-                                <div id="thankyou" class="collapse">ありがとうございます / Arigatou gozaimasu</div>
-                                <div id="sorry" class="collapse">すみません / Sumimasen</div>
-                                <div id="noproblem" class="collapse">大丈夫です / Daijoubu desu</div>
-                                <div id="toilet" class="collapse">トイレはどこですか / Toire wa doko desu ka</div>
-                                <div id="plstakecare" class="collapse">よろしくお願いします / Yoroshiku onegai shimasu</div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <!-- 購物區塊 -->
-                    <div>
-                        <fieldset class="form-control border-muted">
-                            <legend>購物</legend>
-                            <div>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#howmuch">這個多少錢？</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#look">我可以看看嗎？</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#haveproduce">有這個嗎？</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#whatisthis">這是什麼？</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#wantthis">我想要這個。</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#creditcard">可以刷卡嗎？</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#othercolor">有其他顏色嗎？</button>
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
-                                    data-bs-target="#taxfree">請問可以免稅嗎？</button>
-                                <hr>
-                                <div id="howmuch" class="collapse">これはいくらですか？ / Kore wa ikura desu ka</div>
-                                <div id="look" class="collapse">見てもいいですか / Mite mo ii desu ka</div>
-                                <div id="haveproduce" class="collapse">これがありますか / Kore ga arimasu ka</div>
-                                <div id="whatisthis" class="collapse">これは何ですか / Kore wa nan desu ka</div>
-                                <div id="wantthis" class="collapse">これをください / Kore o kudasai</div>
-                                <div id="creditcard" class="collapse">クレジットカードは使えますか / Kurejitto kaado wa tsukaemasu ka
-                                </div>
-                                <div id="othercolor" class="collapse">他の色がありますか / Hokano iro ga arimasu ka</div>
-                                <div id="taxfree" class="collapse">免稅、できますか / menze dekimaska</div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <!-- 飲食 -->
-                    <div>
-                        <fieldset class="form-control border-muted">
-                            <legend>飲食</legend>
-                            <div>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#menu">請給我菜單。</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#food">這道菜有什麼？</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#recommend">請給我推薦一下。</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#vegetarian">我是素食者。</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#order">可以點餐嗎？</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#noseafood">我不吃海鮮。</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#waterpls">請給我一杯水。</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#delicious">這道菜很好吃！</button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#checkout">請幫我結帳。 </button>
-                                <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
-                                    data-bs-target="#thankservice">謝謝款待</button>
-                                <hr>
-                                <div id="menu" class="collapse">メニューをください / Menyuu o kudasai</div>
-                                <div id="food" class="collapse">この料理は何が入っていますか / Kono ryouri wa nani ga haitteimasu ka
-                                </div>
-                                <div id="recommend" class="collapse">おすすめをお願いします / Osusume o onegai shimasu</div>
-                                <div id="vegetarian" class="collapse">私はベジタリアンです / Watashi wa bejitarian desu.</div>
-                                <div id="order" class="collapse">注文してもいいですか / Chuumon shite mo ii desu ka</div>
-                                <div id="noseafood" class="collapse">私は海鮮を食べません / Watashi wa kaisen o tabemasen</div>
-                                <div id="waterpls" class="collapse">水をください / Mizu o kudasai</div>
-                                <div id="delicious" class="collapse">この料理はおいしいです / Kono ryouri wa oishii desu</div>
-                                <div id="checkout" class="collapse">お会計お願いします / Okaikei onegaishimasu</div>
-                                <div id="thankservice" class="collapse">ごちそうさまでした / Gochisousama deshita</div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <br>
                 </div>
             </div>
         </div>
         <div class="col-md-1"></div>
     </div>
+
+    <footer>
+        <div>
+            <p>Author: Hege Refsnes<br>
+                <a href="https://www.google.com/?hl=zh_TW" style="color: aliceblue;">google</a>
+            </p>
+        </div>
+    </footer>
 
 </body>
 

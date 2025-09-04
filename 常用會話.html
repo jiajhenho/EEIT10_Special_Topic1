@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用會話</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="../js/bootstrap.bundle.js"></script>
+
+    <style>
+        body {
+            background-color: lightslategrey;
+        }
+
+        .btn {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: rgba(255, 255, 255, 0.5);">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-link ms-3" href="/小專題.html"><i class="bi bi-house"></i> Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/行李清單.html">行李清單</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 常用會話區塊 -->
+    <div class="row row-md-3 m-3 g-4">
+        <!-- 禮儀區塊 -->
+        <div>
+            <fieldset class="form-control border-muted">
+                <legend>禮儀</legend>
+                <div>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#Hello">你好</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#goodmorning">早安</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#goodevening">晚安</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#goodbye">再見</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#thankyou">謝謝</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#sorry">不好意思 / 對不起</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#noproblem">沒關係</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#toilet">請問廁所在哪裡?</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
+                        data-bs-target="#plstakecare">請多關照</button>
+                    <hr>
+                    <div id="Hello" class="collapse">こんにちは <br> Konnichiwa</div>
+                    <div id="goodmorning" class="collapse">おはようございます <br> Ohayou gozaimasu</div>
+                    <div id="goodevening" class="collapse">こんばんは <br> Konbanwa</div>
+                    <div id="goodbye" class="collapse">さようなら <br> Sayounara</div>
+                    <div id="thankyou" class="collapse">ありがとうございます <br> Arigatou gozaimasu</div>
+                    <div id="sorry" class="collapse">すみません <br> Sumimasen</div>
+                    <div id="noproblem" class="collapse">大丈夫です <br> Daijoubu desu</div>
+                    <div id="toilet" class="collapse">トイレはどこですか <br> Toire wa doko desu ka</div>
+                    <div id="plstakecare" class="collapse">よろしくお願いします <br> Yoroshiku onegai shimasu</div>
+                </div>
+            </fieldset>
+        </div>
+        <!-- 購物區塊 -->
+        <div>
+            <fieldset class="form-control border-muted">
+                <legend>購物</legend>
+                <div>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#howmuch">這個多少錢？</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#look">我可以看看嗎？</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#haveproduce">有這個嗎？</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#whatisthis">這是什麼？</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#wantthis">我想要這個。</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#creditcard">可以刷卡嗎？</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#othercolor">有其他顏色嗎？</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
+                        data-bs-target="#taxfree">請問可以免稅嗎？</button>
+                    <hr>
+                    <div id="howmuch" class="collapse">これはいくらですか？ <br> Kore wa ikura desu ka</div>
+                    <div id="look" class="collapse">見てもいいですか <br> Mite mo ii desu ka</div>
+                    <div id="haveproduce" class="collapse">これがありますか <br> Kore ga arimasu ka</div>
+                    <div id="whatisthis" class="collapse">これは何ですか <br> Kore wa nan desu ka</div>
+                    <div id="wantthis" class="collapse">これをください <br> Kore o kudasai</div>
+                    <div id="creditcard" class="collapse">クレジットカードは使えますか <br> Kurejitto kaado wa tsukaemasu ka
+                    </div>
+                    <div id="othercolor" class="collapse">他の色がありますか <br> Hokano iro ga arimasu ka</div>
+                    <div id="taxfree" class="collapse">免稅、できますか <br> menze dekimaska</div>
+                </div>
+            </fieldset>
+        </div>
+        <!-- 飲食 -->
+        <div>
+            <fieldset class="form-control border-muted">
+                <legend>飲食</legend>
+                <div>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#menu">請給我菜單。</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#food">這道菜有什麼？</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#recommend">請給我推薦一下。</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#vegetarian">我是素食者。</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#order">可以點餐嗎？</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#noseafood">我不吃海鮮。</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#waterpls">請給我一杯水。</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#delicious">這道菜很好吃！</button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#checkout">請幫我結帳。 </button>
+                    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
+                        data-bs-target="#thankservice">謝謝款待</button>
+                    <hr>
+                    <div id="menu" class="collapse">メニューをください <br> Menyuu o kudasai</div>
+                    <div id="food" class="collapse">この料理は何が入っていますか <br> Kono ryouri wa nani ga haitteimasu ka
+                    </div>
+                    <div id="recommend" class="collapse">おすすめをお願いします <br> Osusume o onegai shimasu</div>
+                    <div id="vegetarian" class="collapse">私はベジタリアンです <br> Watashi wa bejitarian desu.</div>
+                    <div id="order" class="collapse">注文してもいいですか <br> Chuumon shite mo ii desu ka</div>
+                    <div id="noseafood" class="collapse">私は海鮮を食べません / Watashi wa kaisen o tabemasen</div>
+                    <div id="waterpls" class="collapse">水をください <br> Mizu o kudasai</div>
+                    <div id="delicious" class="collapse">この料理はおいしいです <br> Kono ryouri wa oishii desu</div>
+                    <div id="checkout" class="collapse">お会計お願いします <br> Okaikei onegaishimasu</div>
+                    <div id="thankservice" class="collapse">ごちそうさまでした <br> Gochisousama deshita</div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+</body>
+
+</html>
