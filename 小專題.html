@@ -23,10 +23,30 @@
             object-fit: cover;
         }
 
+        .card-title {
+            font-size: x-large;
+        }
+
+        /* 統一卡片圖片大小 */
+        .card-img {
+            height: 600px;
+            /* 這裡設定你想要的高度，例如 200px */
+            object-fit: cover;
+            /* 讓圖片填滿容器，並裁剪多餘的部分 */
+            width: 100%;
+            /* 確保圖片寬度與卡片寬度相同 */
+        }
+
+        /* 讓圖片覆蓋層的文字更清晰 */
+        .card-img-overlay {
+            background-color: rgba(0, 0, 0, 0.1);
+            /* 增加半透明黑色遮罩 */
+        }
+
         footer {
             text-align: center;
             padding: 3px;
-            background-color:rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);
             color: white;
         }
     </style>
@@ -70,7 +90,6 @@
                 </ul>
             </div>
         </div>
-
     </nav>
 
     <!-- 輪播圖 -->
@@ -121,8 +140,7 @@
                             aria-selected="true">行程規劃</button>
 
                         <button class="nav-link" id="nav-day-tab" data-bs-toggle="tab" data-bs-target="#nav-attractions"
-                            type="button" role="tab" aria-controls="nav-attractions"
-                            aria-selected="false">旅行景點</button>
+                            type="button" role="tab" aria-controls="nav-attractions" aria-selected="false">旅遊景點</button>
 
                         <button class="nav-link" id="nav-live-tab" data-bs-toggle="tab" data-bs-target="#nav-live"
                             type="button" role="tab" aria-controls="nav-live" aria-selected="false">住宿資訊</button>
@@ -199,12 +217,19 @@
                 <!-- 旅行景點 -->
                 <div class="tab-pane fade" id="nav-attractions" role="tabpanel" aria-labelledby="nav-attractions-tab"
                     tabindex="0">
-                    <div class="mt-3">
+                    <div class="row mt-3 g-1">
                         <div class="card text-bg-dark">
-                            <img src="./img/金閣寺.jpg" class="card-img" alt="金閣寺">
+                            <img src="./img/保津川遊船.jpg" class="card-img" alt="保津川遊船">
                             <div class="card-img-overlay">
-                                <h5 class="card-title">金閣寺</h5>
-                                <p class="card-text"></p>
+                                <h5 class="card-title">保津川遊船</h5>
+                                <p class="card-text">穿越西京都野外山丘的遊船之旅</p>
+                            </div>
+                        </div>
+                        <div class="card text-bg-dark">
+                            <img src="./img/金閣寺.jpg" class="card-img" alt="鹿苑寺">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">鹿苑寺</h5>
+                                <p class="card-text">位於京都的著名禪宗寺廟，以其金箔覆蓋的「舍利殿」（金閣）而聞名</p>
                             </div>
                         </div>
                         <div class="card text-bg-dark">
@@ -215,17 +240,10 @@
                             </div>
                         </div>
                         <div class="card text-bg-dark">
-                            <img src="..." class="card-img" alt="...">
+                            <img src="./img/錦市場.png" class="card-img" alt="錦市場">
                             <div class="card-img-overlay">
-                                <h5 class="card-title">...</h5>
-                                <p class="card-text">...</p>
-                            </div>
-                        </div>
-                        <div class="card text-bg-dark">
-                            <img src="..." class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">...</h5>
-                                <p class="card-text">...</p>
+                                <h5 class="card-title">錦市場</h5>
+                                <p class="card-text">有「京都的廚房」之稱商店街</p>
                             </div>
                         </div>
                         <div class="card text-bg-dark">
@@ -389,8 +407,8 @@
         </div>
         <div class="col-md-1"></div>
     </div>
-
-    <footer>
+    <!--頁尾 -->
+    <footer class="mt-5">
         <div>
             <p>Author: Hege Refsnes<br>
                 <a href="https://www.google.com/?hl=zh_TW" style="color: aliceblue;">google</a>

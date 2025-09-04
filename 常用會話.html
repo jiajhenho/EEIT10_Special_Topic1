@@ -11,12 +11,23 @@
 
     <style>
         body {
-            background-color: lightslategrey;
+            /*background-color: lightslategrey;*/
+            background-image: url("./img/ash-edmonds-uztw2giebSc-unsplash.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        @media (min-width: 1200px) {
+            body {
+                background-image: url("./img/二条城\ 庭院.jpg");
+            }
         }
 
         .btn {
             margin: 5px;
         }
+
     </style>
 </head>
 
@@ -44,9 +55,9 @@
     <div class="row row-md-3 m-3 g-4">
         <!-- 禮儀區塊 -->
         <div>
-            <fieldset class="form-control border-muted">
+            <fieldset class="form-control border-muted" style="font-size:larger; background-color: rgba(255, 255, 255, 0.9);">
                 <legend>禮儀</legend>
-                <div>
+                <div id="etiquette">
                     <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
                         data-bs-target="#Hello">你好</button>
                     <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
@@ -66,23 +77,23 @@
                     <button type="button" class="btn btn-outline-primary" data-bs-toggle="collapse"
                         data-bs-target="#plstakecare">請多關照</button>
                     <hr>
-                    <div id="Hello" class="collapse">こんにちは <br> Konnichiwa</div>
-                    <div id="goodmorning" class="collapse">おはようございます <br> Ohayou gozaimasu</div>
-                    <div id="goodevening" class="collapse">こんばんは <br> Konbanwa</div>
-                    <div id="goodbye" class="collapse">さようなら <br> Sayounara</div>
-                    <div id="thankyou" class="collapse">ありがとうございます <br> Arigatou gozaimasu</div>
-                    <div id="sorry" class="collapse">すみません <br> Sumimasen</div>
-                    <div id="noproblem" class="collapse">大丈夫です <br> Daijoubu desu</div>
-                    <div id="toilet" class="collapse">トイレはどこですか <br> Toire wa doko desu ka</div>
-                    <div id="plstakecare" class="collapse">よろしくお願いします <br> Yoroshiku onegai shimasu</div>
+                    <div id="Hello" class="collapse" data-bs-parent="#etiquette">こんにちは <br> Konnichiwa</div>
+                    <div id="goodmorning" class="collapse" data-bs-parent="#etiquette">おはようございます <br> Ohayou gozaimasu</div>
+                    <div id="goodevening" class="collapse" data-bs-parent="#etiquette">こんばんは <br> Konbanwa</div>
+                    <div id="goodbye" class="collapse" data-bs-parent="#etiquette">さようなら <br> Sayounara</div>
+                    <div id="thankyou" class="collapse" data-bs-parent="#etiquette">ありがとうございます <br> Arigatou gozaimasu</div>
+                    <div id="sorry" class="collapse" data-bs-parent="#etiquette">すみません <br> Sumimasen</div>
+                    <div id="noproblem" class="collapse" data-bs-parent="#etiquette">大丈夫です <br> Daijoubu desu</div>
+                    <div id="toilet" class="collapse" data-bs-parent="#etiquette">トイレはどこですか <br> Toire wa doko desu ka</div>
+                    <div id="plstakecare" class="collapse" data-bs-parent="#etiquette">よろしくお願いします <br> Yoroshiku onegai shimasu</div>
                 </div>
             </fieldset>
         </div>
         <!-- 購物區塊 -->
         <div>
-            <fieldset class="form-control border-muted">
+            <fieldset class="form-control border-muted" style="font-size:larger; background-color: rgba(255, 255, 255, 0.9);">
                 <legend>購物</legend>
-                <div>
+                <div id="buy">
                     <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
                         data-bs-target="#howmuch">這個多少錢？</button>
                     <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
@@ -100,23 +111,23 @@
                     <button type="button" class="btn btn-outline-danger" data-bs-toggle="collapse"
                         data-bs-target="#taxfree">請問可以免稅嗎？</button>
                     <hr>
-                    <div id="howmuch" class="collapse">これはいくらですか？ <br> Kore wa ikura desu ka</div>
-                    <div id="look" class="collapse">見てもいいですか <br> Mite mo ii desu ka</div>
-                    <div id="haveproduce" class="collapse">これがありますか <br> Kore ga arimasu ka</div>
-                    <div id="whatisthis" class="collapse">これは何ですか <br> Kore wa nan desu ka</div>
-                    <div id="wantthis" class="collapse">これをください <br> Kore o kudasai</div>
-                    <div id="creditcard" class="collapse">クレジットカードは使えますか <br> Kurejitto kaado wa tsukaemasu ka
+                    <div id="howmuch" class="collapse" data-bs-parent="#buy">これはいくらですか？ <br> Kore wa ikura desu ka</div>
+                    <div id="look" class="collapse" data-bs-parent="#buy">見てもいいですか <br> Mite mo ii desu ka</div>
+                    <div id="haveproduce" class="collapse" data-bs-parent="#buy">これがありますか <br> Kore ga arimasu ka</div>
+                    <div id="whatisthis" class="collapse" data-bs-parent="#buy">これは何ですか <br> Kore wa nan desu ka</div>
+                    <div id="wantthis" class="collapse" data-bs-parent="#buy">これをください <br> Kore o kudasai</div>
+                    <div id="creditcard" class="collapse" data-bs-parent="#buy">クレジットカードは使えますか <br> Kurejitto kaado wa tsukaemasu ka
                     </div>
-                    <div id="othercolor" class="collapse">他の色がありますか <br> Hokano iro ga arimasu ka</div>
-                    <div id="taxfree" class="collapse">免稅、できますか <br> menze dekimaska</div>
+                    <div id="othercolor" class="collapse" data-bs-parent="#buy">他の色がありますか <br> Hokano iro ga arimasu ka</div>
+                    <div id="taxfree" class="collapse" data-bs-parent="#buy">免稅、できますか <br> menze dekimaska</div>
                 </div>
             </fieldset>
         </div>
         <!-- 飲食 -->
         <div>
-            <fieldset class="form-control border-muted">
+            <fieldset class="form-control border-muted" style="font-size:larger; background-color: rgba(255, 255, 255, 0.9);">
                 <legend>飲食</legend>
-                <div>
+                <div id="mealtime">
                     <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
                         data-bs-target="#menu">請給我菜單。</button>
                     <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
@@ -138,17 +149,17 @@
                     <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse"
                         data-bs-target="#thankservice">謝謝款待</button>
                     <hr>
-                    <div id="menu" class="collapse">メニューをください <br> Menyuu o kudasai</div>
-                    <div id="food" class="collapse">この料理は何が入っていますか <br> Kono ryouri wa nani ga haitteimasu ka
+                    <div id="menu" class="collapse" data-bs-parent="#mealtime">メニューをください <br> Menyuu o kudasai</div>
+                    <div id="food" class="collapse" data-bs-parent="#mealtime">この料理は何が入っていますか <br> Kono ryouri wa nani ga haitteimasu ka
                     </div>
-                    <div id="recommend" class="collapse">おすすめをお願いします <br> Osusume o onegai shimasu</div>
-                    <div id="vegetarian" class="collapse">私はベジタリアンです <br> Watashi wa bejitarian desu.</div>
-                    <div id="order" class="collapse">注文してもいいですか <br> Chuumon shite mo ii desu ka</div>
-                    <div id="noseafood" class="collapse">私は海鮮を食べません / Watashi wa kaisen o tabemasen</div>
-                    <div id="waterpls" class="collapse">水をください <br> Mizu o kudasai</div>
-                    <div id="delicious" class="collapse">この料理はおいしいです <br> Kono ryouri wa oishii desu</div>
-                    <div id="checkout" class="collapse">お会計お願いします <br> Okaikei onegaishimasu</div>
-                    <div id="thankservice" class="collapse">ごちそうさまでした <br> Gochisousama deshita</div>
+                    <div id="recommend" class="collapse" data-bs-parent="#mealtime">おすすめをお願いします <br> Osusume o onegai shimasu</div>
+                    <div id="vegetarian" class="collapse" data-bs-parent="#mealtime">私はベジタリアンです <br> Watashi wa bejitarian desu.</div>
+                    <div id="order" class="collapse" data-bs-parent="#mealtime">注文してもいいですか <br> Chuumon shite mo ii desu ka</div>
+                    <div id="noseafood" class="collapse" data-bs-parent="#mealtime">私は海鮮を食べません <br> Watashi wa kaisen o tabemasen</div>
+                    <div id="waterpls" class="collapse" data-bs-parent="#mealtime">水をください <br> Mizu o kudasai</div>
+                    <div id="delicious" class="collapse" data-bs-parent="#mealtime">この料理はおいしいです <br> Kono ryouri wa oishii desu</div>
+                    <div id="checkout" class="collapse" data-bs-parent="#mealtime">お会計お願いします <br> Okaikei onegaishimasu</div>
+                    <div id="thankservice" class="collapse" data-bs-parent="#mealtime">ごちそうさまでした <br> Gochisousama deshita</div>
                 </div>
             </fieldset>
         </div>
