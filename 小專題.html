@@ -9,45 +9,9 @@
     <title>小專題</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./小專題css.css">
+    <script src="./輪播圖.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
-
-    <style>
-        body {
-            background-color: antiquewhite;
-        }
-
-        /*輪播圖高度固定\*/
-        .carousel-item img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .card-title {
-            font-size: x-large;
-        }
-
-        /* 統一卡片圖片大小 */
-        .card-img {
-            height: 100%;
-            /* 這裡設定你想要的高度，例如 200px */
-            width: 100%;
-            /* 確保圖片寬度與卡片寬度相同 */
-        }
-
-        /* 讓圖片覆蓋層的文字更清晰 */
-        .card-img-overlay {
-            background-color: rgba(0, 0, 0, 0.1);
-            /* 增加半透明黑色遮罩 */
-        }
-
-        footer {
-            text-align: center;
-            padding: 3px;
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-        }
-    </style>
 
 </head>
 
@@ -91,27 +55,46 @@
     </nav>
 
     <!-- 輪播圖 -->
-    <div class="container mt-0">
-        <div id="demo" class="carousel slide" data-bs-interval="2000" data-bs-ride="carousel"> <!--速度先設成2秒一次-->
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+    <div class="container-fluid mt-0">
+        <div id="demo" class="carousel slide" data-bs-interval="3000" data-bs-ride="carousel"> <!--3秒換一次-->
+            <div class="carousel-indicators" id="carousel-indicators"></div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/清水寺 夜楓.jpg" class="img-fluid " alt="清水寺">
+                    <a href="https://www.kiyomizudera.or.jp/" target="_blank"><img src="./img/清水寺 夜楓.jpg" alt="清水寺"></a>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>清水寺 夜楓</h5>
                         <p>楓夜季,夜間特別開放</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/金閣寺.jpg" class="img-fluid" alt="">
+                    <a href="https://www.shokoku-ji.jp/kinkakuji/" target="_blank"><img src="./img/金閣寺.jpg"
+                            alt="金閣寺"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>金閣寺</h5>
+                        <p>位於京都的著名禪宗寺廟，以其金箔覆蓋的「舍利殿」（金閣）而聞名</p>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/二条城 庭院.jpg" class="img-fluid" alt="">
+                    <a href="https://nijo-jocastle.city.kyoto.lg.jp/"><img src="./img/二条城 庭院.jpg" alt="二条城庭院"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>二条城</h5>
+                        <p>二之丸御殿的庭院</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.hozugawakudari.jp/tickets" target="_blank"><img src="./img/保津川遊船2.jpg"
+                            alt="保津川遊船"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>保津川遊船</h5>
+                        <p>穿越西京都野外山丘的遊船之旅</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <a href="https://www.kyoto-nishiki.or.jp/" target="_blank"><img src="./img/錦市場.png" alt="錦市場"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>錦市場</h5>
+                        <p>有「京都的廚房」之稱商店街</p>
+                    </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -141,8 +124,8 @@
                             data-bs-target="#nav-journey" type="button" role="tab" aria-controls="nav-journey"
                             aria-selected="true">行程規劃</button>
 
-                        <button class="nav-link" id="nav-day-tab" data-bs-toggle="tab" data-bs-target="#nav-attractions"
-                            type="button" role="tab" aria-controls="nav-attractions" aria-selected="false">旅遊景點</button>
+                        <!-- <button class="nav-link" id="nav-day-tab" data-bs-toggle="tab" data-bs-target="#nav-attractions"
+                            type="button" role="tab" aria-controls="nav-attractions" aria-selected="false">景點照片</button> -->
 
                         <button class="nav-link" id="nav-live-tab" data-bs-toggle="tab" data-bs-target="#nav-live"
                             type="button" role="tab" aria-controls="nav-live" aria-selected="false">住宿資訊</button>
@@ -216,54 +199,11 @@
                         </tr>
                     </table>
                 </div>
-                <!-- 旅行景點 -->
-                <div class="tab-pane fade" id="nav-attractions" role="tabpanel" aria-labelledby="nav-attractions-tab"
+                <!-- 景點照片 -->
+                <!-- <div class="tab-pane fade" id="nav-attractions" role="tabpanel" aria-labelledby="nav-attractions-tab"
                     tabindex="0">
-                    <div class="row mt-3 g-1 d-flex" style="flex: content;">
-                        <div class="card text-bg-dark">
-                            <img src="./img/保津川遊船2.jpg" class="card-img" alt="保津川遊船">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">保津川遊船</h5>
-                                <p class="card-text">穿越西京都野外山丘的遊船之旅</p>
-                            </div>
-                        </div>
-                        <div class="card text-bg-dark">
-                            <img src="./img/金閣寺.jpg" class="card-img" alt="鹿苑寺">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">鹿苑寺</h5>
-                                <p class="card-text">位於京都的著名禪宗寺廟，以其金箔覆蓋的「舍利殿」（金閣）而聞名</p>
-                            </div>
-                        </div>
-                        <div class="card text-bg-dark">
-                            <img src="./img/清水寺 夜楓2.jpg" class="card-img" alt="清水寺 夜楓">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">清水寺 夜楓</h5>
-                                <p class="card-text">楓夜季,夜間特別開放</p>
-                            </div>
-                        </div>
-                        <div class="card text-bg-dark">
-                            <img src="./img/錦市場.png" class="card-img" alt="錦市場">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">錦市場</h5>
-                                <p class="card-text">有「京都的廚房」之稱商店街</p>
-                            </div>
-                        </div>
-                        <div class="card text-bg-dark">
-                            <img src="..." class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">...</h5>
-                                <p class="card-text">...</p>
-                            </div>
-                        </div>
-                        <div class="card text-bg-dark">
-                            <img src="..." class="card-img" alt="...">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">...</h5>
-                                <p class="card-text">...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    
+                </div> -->
                 <!-- 住宿資訊 -->
                 <div class="tab-pane fade " id="nav-live" role="tabpanel" aria-labelledby="nav-live-tab" tabindex="0">
                     <div class="card col cols-md-3 m-3 g-4" style="max-width: max-content;">
@@ -299,11 +239,58 @@
                 </div>
                 <!-- 交通資訊 -->
                 <div class="tab-pane fade" id="nav-transportation" role="tabpanel"
-                    aria-labelledby="nav-transportation-tab" tabindex="0">...
+                    aria-labelledby="nav-transportation-tab" tabindex="0">
+                    <div class="row mt-3 g-3">
+                        <div>
+                            <h5 style="text-align: center;">關西機場←→京都車站</h5>
+                            <div class="d-flex justify-content-around p-3 text-white">
+                                <div class="card p-2 bg-info">
+                                    <img src="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">關西機場特快「HARUKA」</h5>
+                                        <a href="https://www.westjr.co.jp/global/tc/travel/shopping/access/train.html" class="btn btn-primary">go</a>
+                                    </div>
+                                </div>
+                                <div class="card p-2 bg-info">
+                                    <img src="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">KIX 機場巴士</h5>
+                                        <a href="https://www.westjr.co.jp/global/tc/travel/shopping/access/train.html" class="btn btn-primary">go</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 style="text-align: center;">A</h5>
+                            <div class="d-flex justify-content-around p-3 bg-secondary text-white">
+                                <div class="card p-2 bg-info">
+                                    <img src="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <a href="" class="btn btn-primary">go</a>
+                                    </div>
+                                </div>
+                                <div class="card p-2 bg-info">
+                                    <img src="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <a href="" class="btn btn-primary">go</a>
+                                    </div>
+                                </div>
+                                <div class="card p-2 bg-info">
+                                    <img src="" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title"></h5>
+                                        <a href="" class="btn btn-primary">go</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- 美食景點 -->
                 <div class="tab-pane fade" id="nav-food" role="tabpanel" aria-labelledby="nav-food-tab" tabindex="0">
-                    <div class="row row-cols-1 row-cols-md-3 m-3 g-4">
+                    <div class="row row-cols-1 row-cols-md-3 m-3 g-4" id="food-list">
                         <div class="col">
                             <div class="card">
                                 <img src="./img/牛奶布丁.png " class="card-img-top" alt="牛奶布丁">
@@ -311,7 +298,7 @@
                                     <h5 class="card-title"><a class="link-underline-light"
                                             href="https://www.ohayo-milk.co.jp/dessert/14050.html"
                                             target="_blank">牛奶布丁</a></h5>
-                                    <p class="card-text">超好吃布丁</p>
+                                    <p class="card-text">好吃的布丁</p>
                                 </div>
                             </div>
                         </div>
@@ -327,21 +314,10 @@
                         </div>
                         <div class="col">
                             <div class="card">
-                                <img src="./img/錦市場.png" class="card-img-top" alt="錦市場">
+                                <img src="./img/金箔抹茶冰淇淋.jpg" class="card-img-top" alt="金箔抹茶冰淇淋">
                                 <div class="card-body">
-                                    <h5 class="card-title"><a class="link-underline-light"
-                                            href="https://www.kyoto-nishiki.or.jp/" target="_blank">錦市場</a></h5>
-                                    <p class="card-text">有「京都的廚房」之稱商店街</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src=" " class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural
-                                        lead-in to additional content.</p>
+                                    <h5 class="card-title">金箔抹茶冰淇淋</h5>
+                                    <p class="card-text">金閣寺限定金箔冰淇淋</p>
                                 </div>
                             </div>
                         </div>
@@ -359,7 +335,7 @@
                 </div>
                 <!-- 購物清單 -->
                 <div class="tab-pane fade mt-3" id="nav-buy" role="tabpanel" aria-labelledby="nav-buy-tab" tabindex="0">
-                    <div class="row row-cols-1 row-cols-md-3 m-3 g-4">
+                    <div class="row row-cols-1 row-cols-md-3 m-3 g-4" id="buy-list">
                         <div class="col">
                             <div class="card">
                                 <img src="./img/休足時間.png" class="card-img-top" alt="休足時間">
@@ -409,10 +385,11 @@
         </div>
         <div class="col-md-1"></div>
     </div>
+
     <!--頁尾 -->
     <footer class="mt-5">
         <div>
-            <p>Author: Hege Refsnes<br>
+            <p>京都五日遊<br>
                 <a href="https://www.google.com/?hl=zh_TW" style="color: aliceblue;">google</a>
             </p>
         </div>
