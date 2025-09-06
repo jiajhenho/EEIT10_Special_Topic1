@@ -10,11 +10,14 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./小專題v2css.css">
-    <script src="./小專題isv2.js"></script>
+    <script src="./小專題jsv2.js"></script>
+    <script src="./楓葉背景.js"></script>
+    <link rel="stylesheet" href="./楓葉背景.css">
     <script src="../js/bootstrap.bundle.js"></script>
 </head>
 
 <body>
+    <div id="falling-leaves-container"></div>
     <!-- 導覽列 -->
     <section id="nav" class="sticky-top">
         <nav class="navbar navbar-expand-lg" style="background-color: rgba(255, 255, 255, 0.5);">
@@ -40,7 +43,7 @@
     </section>
 
     <!-- 輪播圖 -->
-    <section id="carousel" class="content-wrapper">
+    <section id="carousel">
         <div class="container-fluid mt-0">
             <div id="carouseljs" class="carousel slide" data-bs-interval="3000" data-bs-ride="carousel"> <!--3秒換一次-->
                 <div class="carousel-indicators" id="carousel-indicators"></div>
@@ -99,25 +102,132 @@
         </div>
     </section>
 
-    <!-- 內容 -->
+    <!-- <section id="contentblock2">
+        <div class="" style="background-color: aqua;">
+            <button class="" style="background-color: aquamarine;">
+
+            </button>
+        </div>
+
+    </section> -->
+
+    <!-- 選單按鈕 -->
     <section id="contentblock">
         <div class="radial-menu-container">
             <button class="radial-menu-main-button">
-                <i class="bi bi-plus"></i> </button>
+                <h6>menu</h6>
+            </button>
 
             <div class="radial-menu-items">
-                <button class="radial-menu-item" data-content="內容一">
-                    <i class="bi bi-star-fill"></i>
+                <button class="radial-menu-child-button" data-content-id="journey-content">
+                    行程
                 </button>
-                <button class="radial-menu-item" data-content="內容二">
-                    <i class="bi bi-heart-fill"></i>
+                <button class="radial-menu-child-button" data-content-id="live-content">
+                    住宿
                 </button>
-                <button class="radial-menu-item" data-content="內容三">
+                <button class="radial-menu-child-button" data-content-id="1-content">
                     <i class="bi bi-bell-fill"></i>
                 </button>
             </div>
         </div>
     </section>
+    <!-- 按鈕內容 -->
+    <section id="content-display-area" class="content-display-section">
+        <div id="content-placeholder"></div>
+    </section>
+    <div id="hidden-content-data" style="display: none;">
+        <!--行程-->
+        <div id="journey-content" class="content-item">
+            <h4 style="color: whitesmoke;">京都行程規劃</h4>
+            <table class="table table-bordered">
+                <tr class="text-center">
+                    <th>Day 1</th>
+                    <th>Day 2</th>
+                    <th>Day 3</th>
+                    <th>Day 4</th>
+                    <th>Day 5</th>
+                </tr>
+                <tr>
+                    <th>機場報到</th>
+                    <th>保津川遊船</th>
+                    <th>錦市場</th>
+                    <th>伏見稻荷神社</th>
+                    <th>機場報到</th>
+                </tr>
+                <tr>
+                    <th>京都車站</th>
+                    <th>嵐山渡月橋</th>
+                    <th>花見小路</th>
+                    <th>二条城</th>
+                    <th>免稅商店</th>
+                </tr>
+                <tr>
+                    <th>飯店</th>
+                    <th>竹林小徑</th>
+                    <th>八坂神社</th>
+                    <th>高木批發超市</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>晚餐</th>
+                    <th>午餐</th>
+                    <th>二年坂</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th>購物</th>
+                    <th>金閣寺</th>
+                    <th>三年坂</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th>北野天滿宮</th>
+                    <th>清水寺</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </table>
+        </div>
+        <!-- 住宿 -->
+        <div id="live-content" class="content-item">
+            <div class="card col cols-md-3 m-3 g-4" style="max-width: max-content;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="/img/飯店" class="img-fluid rounded-start" alt="飯店">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h3><a class="card-title link-primary link-underline-light mt-3"
+                                    href="https://sotetsu-hotels.com/fresa-inn/hachijo/">相鐵FRESA INN 京都站八條口</a>
+                            </h3>
+                            <hr>
+                            <p class="card-text">
+                                地址 : １１番地 Higashikujo Nishisannocho, Minami Ward, Kyoto, 601-8003日本
+                                <hr>
+                                電話 : (+81) 75-284-0203
+                                <hr>
+                                入住時間 : 下午3:00
+                                <br>
+                                退房時間 : 上午11:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3268.9505637004095!2d135.760992!3d34.982902999999965!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ad12afd4d7%3A0xff8371e5fe953e2c!2z55u46ZC1RlJFU0EgSU5OIOS6rOmDveermeWFq-aineWPow!5e0!3m2!1szh-TW!2stw!4v1756628760100!5m2!1szh-TW!2stw"
+                width=100% height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div id="" class="content-item">
+
+        </div>
+    </div>
 
     <!-- 返回頂部按鈕 -->
     <section id="gototop">
@@ -127,13 +237,12 @@
             </a>
         </div>
     </section>
-
+    <br>
+    <br>
+    <br>
     <!--頁尾 -->
     <section id="footer">
         <footer class="footer">
-            <div>
-                <p>京都五日遊</p>
-            </div>
         </footer>
     </section>
 
