@@ -1,0 +1,82 @@
+/*主頁背景*/
+body {
+    background-color: antiquewhite;
+}
+
+/*輪播圖高度固定\*/
+.carousel-item img {
+    width: 100%;
+    height: 500PX;
+    /* object-fit: cover; */
+}
+
+/* 當螢幕寬度小於 700px 時 */
+@media (max-width: 700px) {
+    .carousel-item img {
+        height: 200px;
+        object-fit: contain;
+    }
+}
+
+/* 當螢幕寬度超過 1200px 時 */
+@media (min-width: 1200px) {
+    .carousel-item img {
+        height: 600px;
+        /* 在大螢幕上增加高度 */
+    }
+}
+
+/* 當螢幕寬度超過 1800px 時 */
+@media (min-width: 1800px) {
+    .carousel-item img {
+        height: 700px;
+        /* 在超寬螢幕上進一步增加高度 */
+    }
+}
+
+/* 讓圖片覆蓋層的文字更清晰 */
+.card-img-overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    /* 增加半透明黑色遮罩 */
+}
+
+/* card-title 文字大小 */
+.card-title {
+    font-size: x-large;
+}
+
+/* 統一卡片圖片大小 */
+.card-img {
+    height: 100%;
+    /* 這裡設定你想要的高度，例如 200px */
+    width: 100%;
+    /* 確保圖片寬度與卡片寬度相同 */
+}
+
+/*美食*/
+#food-list .card {
+    height: 500px;
+    object-fit: contain;
+}
+
+#food-list .card-img-top {
+    height: 80%;
+}
+
+/* 購物清單 */
+#buy-list .card {
+    height: 500px;
+    object-fit: contain;
+}
+
+#buy-list .card-img-top {
+    height: 80%;
+}
+
+/* 頁尾 */
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
