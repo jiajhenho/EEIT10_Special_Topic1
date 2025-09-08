@@ -243,7 +243,7 @@ body {
 /* 頁尾 */
 #footer .footer {
     height: 50px;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
     text-align: center;
