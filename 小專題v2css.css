@@ -130,6 +130,16 @@ body {
     right: 0;
 }
 
+.radial-menu-items .radial-menu-child-button:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+.radial-menu-items .radial-menu-child-button:nth-child(5) {
+    bottom: 0;
+    right: 0;
+}
+
 /* 當 .open 類別被添加時，子按鈕的位置和顯示 */
 .radial-menu-items.open .radial-menu-child-button:nth-child(1) {
     transform: translate(70px, 0px);
@@ -149,6 +159,17 @@ body {
     opacity: 1;
 }
 
+.radial-menu-items.open .radial-menu-child-button:nth-child(4) {
+    transform: translate(280px, 0px);
+    /* 向右偏移 */
+    opacity: 1;
+}
+
+.radial-menu-items.open .radial-menu-child-button:nth-child(5) {
+    transform: translate(0px, 70px);
+    /* 向下偏移 */
+    opacity: 1;
+}
 
 /* --- 內容顯示區塊的 CSS --- */
 .content-display-section {
@@ -171,6 +192,23 @@ body {
     margin-right: auto;
     z-index: 1001;
     /* 確保它在頁尾和導航條之上，但低於 radial-menu */
+}
+
+/* 卡片大小 */
+/* 固定卡片圖片大小 */
+.card-img-top {
+    width: 100%;
+    height: 150px; /* 您可以根據需求調整這個值 */
+    object-fit: contain;
+    padding: 3px;
+}
+
+/* 確保卡片內容對齊和間距 */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 返回頂部按鈕的樣式 */
