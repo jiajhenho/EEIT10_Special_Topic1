@@ -1,0 +1,254 @@
+/* 背景 */
+body {
+    background-image: url('./img/ash-edmonds-uztw2giebSc-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-image: linear-gradient(to top, #aa3807 0%, #e98b64 10%, #d48e8e 20%, #9e7a9e 40%, #a58cc7 50%, #6a529b 100%);
+    }
+}
+
+
+/* 輪播圖 */
+/* 輪播圖高度固定 */
+#carousel .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 500PX;
+    /* object-fit: cover; */
+}
+
+/* 當螢幕寬度小於 700px 時 */
+@media (max-width: 700px) {
+    #carousel .carousel-inner .carousel-item img {
+        height: 200px;
+        /* object-fit: contain; */
+    }
+}
+
+/* 當螢幕寬度超過 1200px 時 */
+@media (min-width: 1200px) {
+    #carousel .carousel-inner .carousel-item img {
+        height: 600px;
+        /* 在大螢幕上增加高度 */
+    }
+}
+
+/* 當螢幕寬度超過 1800px 時 */
+@media (min-width: 1800px) {
+    #carousel .carousel-inner .carousel-item img {
+        height: 700px;
+        /* 在超寬螢幕上進一步增加高度 */
+    }
+}
+
+/*內容區塊 按鈕收合*/
+.radial-menu-container {
+    position: absolute;
+    /* 為了子按鈕的絕對定位 */
+    /* bottom: calc(50px + 5px); */
+    /* 假設頁尾高度 60px，按鈕距離頁尾 5px */
+    margin-top: 10px;
+    left: 15px;
+    /* 距離頁面左側 15px */
+    display: inline-block;
+    /* 讓容器只佔用必要空間 */
+    z-index: 1002;
+    /* 確保它在大部分內容之上，甚至在返回頂部按鈕之上 */
+}
+
+.radial-menu-main-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(220, 10, 10, 0.5);
+    /* 主按鈕顏色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    /* 確保在子按鈕之上 */
+    transition: transform 0.3s ease;
+}
+
+/* 徑向選單容器的子按鈕樣式 */
+.radial-menu-child-button {
+    position: absolute;
+    /* 相對於 radial-menu-container 定位 */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(220, 10, 10, 0.5);
+    /* 紅色 */
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.4s ease;
+    opacity: 0;
+}
+
+.radial-menu-items.open {
+    transform: scale(1);
+    /* 展開 */
+    opacity: 1;
+}
+
+/* 當主按鈕被點擊時，通過 JS 展開 .radial-menu-items */
+.radial-menu-container.active .radial-menu-child-button {
+    transform: scale(1);
+    /* 恢復大小 */
+    opacity: 1;
+    pointer-events: auto;
+    /* 變得可點擊 */
+}
+
+/* 子按鈕的初始位置（與主按鈕重疊） */
+.radial-menu-items .radial-menu-child-button:nth-child(1) {
+    bottom: 0;
+    right: 0;
+}
+
+.radial-menu-items .radial-menu-child-button:nth-child(2) {
+    bottom: 0;
+    right: 0;
+}
+
+.radial-menu-items .radial-menu-child-button:nth-child(3) {
+    bottom: 0;
+    right: 0;
+}
+
+.radial-menu-items .radial-menu-child-button:nth-child(4) {
+    bottom: 0;
+    right: 0;
+}
+
+.radial-menu-items .radial-menu-child-button:nth-child(5) {
+    bottom: 0;
+    right: 0;
+}
+
+/* 當 .open 類別被添加時，子按鈕的位置和顯示 */
+.radial-menu-items.open .radial-menu-child-button:nth-child(1) {
+    transform: translate(70px, 0px);
+    /* 向右偏移 */
+    opacity: 1;
+}
+
+.radial-menu-items.open .radial-menu-child-button:nth-child(2) {
+    transform: translate(140px, 0px);
+    /* 向右偏移 */
+    opacity: 1;
+}
+
+.radial-menu-items.open .radial-menu-child-button:nth-child(3) {
+    transform: translate(210px, 0px);
+    /* 向右偏移 */
+    opacity: 1;
+}
+
+.radial-menu-items.open .radial-menu-child-button:nth-child(4) {
+    transform: translate(280px, 0px);
+    /* 向右偏移 */
+    opacity: 1;
+}
+
+.radial-menu-items.open .radial-menu-child-button:nth-child(5) {
+    transform: translate(0px, 70px);
+    /* 向下偏移 */
+    opacity: 1;
+}
+
+/* --- 內容顯示區塊的 CSS --- */
+.content-display-section {
+    /* 為了讓輪播圖和內容區塊之間有空間，可以設定 margin-top */
+    margin-top: 100px;
+    /* 調整你想要的間距 */
+    padding-top: 10px;
+    /* 如果內容區塊也有 padding */
+    padding-bottom: 10px;
+    /* 確保內容區塊底部有空間 */
+    /* border: 1px solid #ddd; */
+    /* 可選：加個邊框區分 */
+    /* border-radius: 8px; */
+    /* 圓角 */
+    /* background-color: #f8f9fa; */
+    /* 可選：給內容區塊一個背景色 */
+    width: 90%;
+    /* 讓內容區塊佔據大部分寬度 */
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1001;
+    /* 確保它在頁尾和導航條之上，但低於 radial-menu */
+}
+
+/* 卡片大小 */
+/* 固定卡片圖片大小 */
+.card-img-top {
+    width: 100%;
+    height: 150px; /* 您可以根據需求調整這個值 */
+    object-fit: contain;
+    padding: 3px;
+}
+
+/* 確保卡片內容對齊和間距 */
+/* #transportation-content .card-body,
+#attractions-content .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* 返回頂部按鈕的樣式 */
+#gototop .go-to-top-button {
+    position: fixed;
+    /* 固定位置 */
+    bottom: 50px;
+    /* 從底部向上偏移，確保在頁尾上方。請根據頁尾高度調整。 */
+    right: 30px;
+    /* 從右側向內偏移 */
+    z-index: 1000;
+    /* 確保按鈕在最上層 */
+    cursor: pointer;
+    /* 滑鼠移上時顯示指標 */
+    opacity: 0.5;
+    /* 設定透明度，可根據喜好調整 */
+    transition: opacity 0.3s ease-in-out;
+    /* 平滑過渡效果 */
+}
+
+#gototop .go-to-top-button i:hover {
+    color: red;
+}
+
+#gototop .go-to-top-button i {
+    font-size: 40px;
+    /* 圖示大小 */
+    color: lightgray;
+    /* 圖示顏色，可替換為您喜歡的顏色 */
+}
+
+/* 頁尾 */
+#footer .footer {
+    height: 50px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    /* padding: 5px; */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
