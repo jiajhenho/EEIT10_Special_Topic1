@@ -244,7 +244,7 @@ body {
 /* 頁尾 */
 #footer .footer {
     height: 50px;
-    /* position: fixed; */
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -252,3 +252,10 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
+
+/* 頁尾 */
+/* #footer {
+    position: absolute;
+    bottom: 0;
+    border: 1px solid red;
+} */
